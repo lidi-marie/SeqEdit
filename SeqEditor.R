@@ -82,14 +82,14 @@ output$calculator <- reactive({
                 else if(input$operation=="Complement") {
                   req(input$bases)
                   paste(sapply(strsplit(toupper(input$bases),""),function(x) 
-                    revalue(x, c("A"="T", "T"="A","C"="G","G"="C"))),collapse = "")
+                    revalue(x, c("A"="T", "T"="A","C"="G","G"="C","U"="A"))),collapse = "")
                 }
     
     ######### Reverse complement operation 
                 else if( input$operation =="Reverse Complement"){
                   req(input$bases)
                   comp<-paste(sapply(strsplit(toupper(input$bases),""),function(x) 
-                    revalue(x, c("A"="T", "T"="A","C"="G","G"="C"))),collapse = "")
+                    revalue(x, c("A"="T", "T"="A","C"="G","G"="C","U"="A"))),collapse = "")
                   sapply(strsplit(comp, ""), function(x) paste(rev(x), collapse=""))
                 }
   
