@@ -29,6 +29,7 @@ Output Window for select transformations:
 --Reverse Complement: Sequence is complemented and reversed (i.e. ATG --> CAT) 
 *Note all U are complemented to A. 
 ```
+All output transformations only transform the input box, it does not stack transformations.
 
 
 
