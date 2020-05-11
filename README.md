@@ -34,3 +34,32 @@ All output transformations only transform the input box, it does not stack trans
 
 💧
 
+
+# Make an app shortcut 
+
+How to make a shortcut that will open in a browser. 
+
+1. Copy and paste in TextEdit, make sure file extension is .command: 
+
+```
+  Rscript '/Users/PATH/Lidi-SeqEdit.R' & open http://127.0.0.1:7658/;
+``` 
+Remember to change PATH for yours. 
+
+2. At the end of Lidi-SeqEdit.R make sure the last line looks like:
+ 
+ ```
+ shinyApp(ui=ui,server=server,options = list(port=7658))
+ ```
+ The port number must match the address set in the .command file. 
+
+3. Make sure the .command has execute permission.
+
+4. Add a file icon, and you're set! Double click to launch app. 
+
+
+
+
+
+
+
